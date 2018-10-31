@@ -61,7 +61,8 @@ if __name__ == '__main__':
     # print userList
     locList = list()
     for name in userList:
-        if name is None:
+        # Who's username is Unclaimed can't get the info, use following if-condition to skip
+        if not name:
             continue
         print name
         global Max_Num
